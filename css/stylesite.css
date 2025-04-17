@@ -88,7 +88,7 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
         /* background: rgba(0, 0, 0, 0.7); */
-        padding: 1.7rem;
+        padding: 80px;
         border-radius: 20px;
         color: white;
         width: 80%;
@@ -354,6 +354,7 @@ footer {
         width: 890px;
         height: 530px;
         font-size: 2.5rem;
+        padding: 50px;
     }
 
     main .banner .intro-title {
