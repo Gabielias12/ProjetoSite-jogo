@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K</title>
+
+    <link href="imagens/reino.jpg" rel="shortcut icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boldonse&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/stylesite.css">
+
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" title="Home" class="header-logo">
+                <img src="imagens/reino.jpg" alt="King of Dragon">
+            </a>
+            <a href="javascript:mostrarmenu()" title="Menu" class="header-menu">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a href="index.html" title="Home">Home</a>
+
+                    </li>
+                    <li>
+                        <a href="sobre.html" title="Sobre">Sobre</a>
+
+                    </li>
+                    <li>
+                        <a href="galeria.html" title="Galeria de Fotos">Galeria de Fotos</a>
+
+                    </li>
+                    <li>
+                        <a href="contato.html" title="Contato">Contato</a>
+
+                    </li>
+                    <li>
+                        <a href="jogar.html" title="Jogar" class="btn">Jogar</a>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <body>
+        <div class="form-container">
+
+            <form name="form-cadastro" method="post" action="http://www.professorburnes.com.br/teste-form.php">
+                <label for="nome">Digite seu Nome: </label>
+                <input type="text" name="nome" id="nome" size="50" maxlength="40" placeholder="Nome Completo"
+                    autocomplete="off" required class="Formularios">
+
+                <label for="email">Digite seu E-mail</label>
+                <input type="email" name="email" id="email" maxlength="50" placeholder="Digite um e-mail válido"
+                    autocomplete="off" required class="Formularios" inputmode="email">
+
+                <label for="telefone">Digite seu Telefone:</label>
+                <input type="text" id="telefone" required autocomplete="off" placeholder="(xx)xxxxx-xxxx"
+                    class="Formularios">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Digite uma mensagem"
+                    class="Formularios"></textarea>
+                <br>
+                <button type="submit" id="botao" class="btn-submit">
+                    Enviar
+                </button>
+            </form>
+        </div>
+
+    </body>
+    <script>
+        //Captura o botão pelo id e adiciona um evento de clique
+        document.getElementById('botao').onclick = function () {
+            //obtem o valor do campo nome
+            var nome = document.getElementById('nome').value;
+            //obtem o valor do campo e-mail
+            var email = document.getElementById('email').value;
+            //obtem o valor do campo telefone
+            var telefone = document.getElementById('telefone').value;
+            //obtem o valor do campo mensagem
+            var mensagem = document.getElementById('mensagem').value;
+
+            //Verifica se todos os campos estao vazios ao mesmo tempo
+            if (nome == "" && email == "" && telefone == "" && mensagem == "") {
+                alert("Por favor, preencha todos os campos")
+            } else {
+                if (nome == "") {
+                    alert("Informe o nome");
+                }
+
+                if (email == "") {
+                    alert("Informe o email");
+                }
+
+                if (telefone == "") {
+                    alert("Informe o telefone");
+                }
+
+                if (mensagem == "") {
+                    alert("Informe um mensagem");
+                }
+            }
+
+            if (nome !== "" && email !== "" && telefone !== "" && mensagem !== "") {
+                alert("Contato enviado com sucesso!");
+            }
+        }
+    </script>
+
+    <footer>
+        &copy;  Desenvolvido por Gabrielly.
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        function mostrarmenu() {
+            $(".header-nav").toggle();
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+</body>
+
+
+</html>
